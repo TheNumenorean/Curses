@@ -1,0 +1,8 @@
+main: net.lotrcraft.curses.Curses
+author: numenorean95
+name: Curses
+version: 0.1
+commands:
+    curse:
+        usage: This takes one parameter - just use /<command> <player>
+        aliases: c
