@@ -30,6 +30,7 @@ public class Curses extends JavaPlugin {
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
 		//Hello!
 		
+		
 		return true;
 	}
 }
