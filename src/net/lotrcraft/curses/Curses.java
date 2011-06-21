@@ -13,7 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Curses extends JavaPlugin {
 	Logger log = Logger.getLogger("minecraft");
-	Set<Player> players;
+	//Set<Player> players;
 
 	public void onDisable() {
 		log.info("Curses! Curses is disabled.");
@@ -25,15 +25,22 @@ public class Curses extends JavaPlugin {
 				.getPluginManager()
 				.registerEvent(Event.Type.PLAYER_MOVE, new CursesListener(),
 						Event.Priority.Highest, this);
-		players = new HashSet<Player>();
+		//players = new HashSet<Player>();
 	}
 
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
-		if (args.length == 0) return false;
 		Player[] players = Bukkit.getServer().getOnlinePlayers();
-		log.info(args.length + "");
-		
-		
-		return true;
+		Player cursed;
+		if (args.length == 1){
+			for (int i = 0; i <= players.length; i++){
+			 if (args.toString() == players[i].toString()){
+				 cursed = players[i];
+			 }
+			}
+			
+			
+
+		}
+		return false;
 	}
 }
