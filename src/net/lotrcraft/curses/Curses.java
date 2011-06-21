@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Logger;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -28,7 +29,9 @@ public class Curses extends JavaPlugin {
 	}
 
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
-		//Hello!
+		if (args.length == 0) return false;
+		Player[] players = Bukkit.getServer().getOnlinePlayers();
+		log.info(args.length + "");
 		
 		
 		return true;
