@@ -33,8 +33,8 @@ public class Curses extends JavaPlugin {
 		Player cursed = null;
 		if (args.length != 1) return false;
 		for (int i = 0; i <= players.length; i++){
-		 if (args.toString() == players[i].toString()){
-			 cursed = players[i];
+		 if (args[0].equals(players[i])){
+			 cursed.equals(players[i]);
 		 }
 		}
 		if (cursed == null) return false;
