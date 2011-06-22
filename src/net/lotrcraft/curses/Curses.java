@@ -30,17 +30,17 @@ public class Curses extends JavaPlugin {
 
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
 		Player[] players = Bukkit.getServer().getOnlinePlayers();
-		Player cursed;
-		if (args.length == 1){
-			for (int i = 0; i <= players.length; i++){
-			 if (args.toString() == players[i].toString()){
-				 cursed = players[i];
-			 }
-			}
-			
-			
-
+		Player cursed = null;
+		if (args.length != 1) return false;
+		for (int i = 0; i <= players.length; i++){
+		 if (args.toString() == players[i].toString()){
+			 cursed = players[i];
+		 }
 		}
-		return false;
+		if (cursed == null) return false;
+		cursed.damage(100);
+		cursed.sendMessage("You have been cursed!!!!!");
+		return true;
+		
 	}
 }
